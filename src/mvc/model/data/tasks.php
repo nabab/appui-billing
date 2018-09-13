@@ -6,81 +6,7 @@ if (
   ($approve_opt = $model->inc->options->from_code('price_approved', 'actions', 'tasks', 'appui')) &&
   ($price_opt = $model->inc->options->from_code('price_update', 'actions', 'tasks', 'appui'))
 ){
-  // $grid = new \bbn\appui\grid($model->db, $model->data, [
-  //   'query' => "
-  //     SELECT bbn_tasks.*,
-  //       MAX(log_close.chrono) AS close_date, log_close.id_user AS close_user,
-  //       MAX(log_approve.chrono) AS approve_date, log_approve.id_user AS approve_user,
-  //       MAX(log_price.chrono) AS price_date
-  //     FROM bbn_tasks
-  //       LEFT JOIN bbn_tasks_invoices
-  //         ON bbn_tasks_invoices.id_task = bbn_tasks.id
-  //       JOIN bbn_tasks_logs AS log_close
-  //         ON log_close.id_task = bbn_tasks.id
-  //       JOIN bbn_tasks_logs AS log_approve
-  //         ON log_approve.id_task = bbn_tasks.id
-  //       LEFT JOIN bbn_tasks_logs AS log_price
-  //         ON log_price.id_task = bbn_tasks.id
-  //         AND log_price.action = UNHEX('".$price_opt."')
-  //   ",
-  //   'count' => "
-  //     SELECT COUNT(DISTINCT bbn_tasks.id)
-  //     FROM bbn_tasks
-  //       LEFT JOIN bbn_tasks_invoices
-  //         ON bbn_tasks_invoices.id_task = bbn_tasks.id
-  //       JOIN bbn_tasks_logs AS log_close
-  //         ON log_close.id_task = bbn_tasks.id
-  //       JOIN bbn_tasks_logs AS log_approve
-  //         ON log_approve.id_task = bbn_tasks.id
-  //       LEFT JOIN bbn_tasks_logs AS log_price
-  //         ON log_price.id_task = bbn_tasks.id
-  //         AND log_price.action = UNHEX('".$price_opt."')
-  //   ",
-  //   'order' => [[
-  //     'field' => 'close_date',
-  //     'dir' => 'DESC'
-  //   ]],
-  //   'filters' => [[
-  //     'field' => 'bbn_tasks_invoices.id_invoice',
-  //     'operator' => 'isnull'
-  //   ], [
-  //     'field' => 'bbn_tasks.state',
-  //     'operator' => 'eq',
-  //     'value' => $closed_opt
-  //   ], [
-  //     'field' => 'bbn_tasks.price',
-  //     'operator' => 'isnotnull'
-  //   ], [
-  //     'field' => 'log_close.action',
-  //     'operator' => 'eq',
-  //     'value' => $close_opt
-  //   ], [
-  //     'field' => 'log_approve.action',
-  //     'operator' => 'eq',
-  //     'value' => $approve_opt
-  //   ], [
-  //     'field' => 'bbn_tasks.active',
-  //     'operator' => 'eq',
-  //     'value' => 1
-  //   ], [
-  //     'conditions' => [[
-  //       'field' => 'log_price.chrono',
-  //       'operator' => 'isnull'
-  //     ], [
-  //       'field' => 'log_approve.chrono',
-  //       'operator' => 'gte',
-  //       'exp' => 'log_price.chrono'
-  //     ]],
-  //     'logic' => 'OR'
-  //   ]],
-  //   'group_by' => 'bbn_tasks.id'
-  // ]);
-  //
-  // if ( $grid->check() ){
-  //   return $grid->get_datatable();
-  // }
-
-  return [
+/*  return [
     'data' => $model->db->get_rows("
       SELECT bbn_tasks.*,
         MAX(log_close.chrono) AS close_date, log_close.id_user AS close_user,
@@ -119,4 +45,132 @@ if (
       hex2bin($approve_opt)
     )
   ];
+*/
+
+  $grid = new \bbn\appui\grid($model->db, $model->data, [
+    'tables' => ['bbn_tasks'],
+    'fields' => [
+      'bbn_tasks.id',
+      'bbn_tasks.type',
+      'bbn_tasks.id_parent',
+      'bbn_tasks.id_user',
+      'bbn_tasks.title',
+      'bbn_tasks.state',
+      'bbn_tasks.priority',
+      'bbn_tasks.id_alias',
+      'bbn_tasks.creation_date',
+      'bbn_tasks.deadline',
+      'bbn_tasks.price',
+      'bbn_tasks.private',
+      'bbn_tasks.active',
+      'close_date' => "MAX(log_close.chrono)",
+      'close_user' => "log_close.id_user",
+      'approve_date' => "MAX(log_approve.chrono)",
+      'approve_user' => "log_approve.id_user",
+      'price_date' => "MAX(log_price.chrono)"
+    ],
+    'join' => [[
+      'table' => 'bbn_tasks_invoices',
+      'type' => 'left',
+      'on' => [
+        'logic' => "AND",
+        'conditions' => [[
+          'field' => "bbn_tasks_invoices.id_task",
+          'operator' => 'eq',
+          'exp' => "bbn_tasks.id"
+        ]]
+      ]
+    ], [
+      'table' => 'bbn_tasks_logs',
+      'alias' => 'log_close',
+      'on' => [
+        'logic' => "AND",
+        'conditions' => [[
+          'field' => "log_close.id_task",
+          'operator' => 'eq',
+          'exp' => "bbn_tasks.id"
+        ]]
+      ]
+    ], [
+      'table' => 'bbn_tasks_logs',
+      'alias' => 'log_approve',
+      'on' => [
+        'logic' => "AND",
+        'conditions' => [[
+          'field' => "log_approve.id_task",
+          'operator' => 'eq',
+          'exp' => "bbn_tasks.id"
+        ]]
+      ]
+    ], [
+      'table' => 'bbn_tasks_logs',
+      'alias' => 'log_price',
+      'type' => 'left',
+      'on' => [
+        'logic' => 'AND',
+        'conditions' => [[
+          'field' => "log_price.id_task",
+          'operator' => 'eq',
+          'exp' => "bbn_tasks.id"
+        ], [
+          'field' => "log_price.action",
+          'operator' => 'eq',
+          'value' => $price_opt
+        ]]
+      ]
+    ]],
+    'filters' => [
+      'logic' => 'AND',
+      'conditions' => [[
+        'field' => 'bbn_tasks_invoices.id_invoice',
+        'operator' => 'isnull'
+      ], [
+        'field' => 'bbn_tasks.state',
+        'operator' => 'eq',
+        'value' => $closed_opt
+      ], [
+        'field' => 'bbn_tasks.price',
+        'operator' => 'isnotnull'
+      ], [
+        'field' => 'log_close.action',
+        'operator' => 'eq',
+        'value' => $close_opt
+      ], [
+        'field' => 'log_approve.action',
+        'operator' => 'eq',
+        'value' => $approve_opt
+      ], [
+        'field' => 'bbn_tasks.active',
+        'operator' => 'eq',
+        'value' => 1
+      ]]
+    ],
+    'group_by' => ['bbn_tasks.id'],
+    'having' => [
+      'logic' => 'AND',
+      'conditions' => [[
+        'field' => "close_date",
+        'operator' => '>',
+        'exp' => "approve_date"
+      ], [
+        'logic' => 'OR',
+        'conditions' => [[
+          'field' => 'price_date',
+          'operator' => 'isnull'
+        ], [
+          'field' => 'approve_date',
+          'operator' => '>',
+          'exp' => "price_date"
+        ]]
+      ]]
+    ],
+    'order' => [
+      'field' => 'close_date',
+      'dir' => 'DESC'
+    ],
+  ]);
+
+  if ( $grid->check() ){
+    return $grid->get_datatable();
+  }
 }

@@ -25,7 +25,7 @@
         }
         return '';
       },
-      renderDescription(row){
+      renderDescription(row){        
         if ( row.description.length ){
           return bbn.fn.shorten(bbn.fn.html2text(row.description), 50);
         }
