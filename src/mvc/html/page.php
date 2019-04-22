@@ -3,15 +3,15 @@
               :scrollable="true"
               :autoload="true"
   >
-    <bbns-tab url="home"
+    <bbns-container url="home"
               :static="true"
               :load="true"
-              title="<i class='fas fa-home'></i> <?=_("Invoices")?>"
-    ></bbns-tab>
-    <bbns-tab url="tasks"
+              title="<i class='nf nf-fa-home'></i> <?=_("Invoices")?>"
+    ></bbns-container>
+    <bbns-container url="tasks"
               :static="true"
               :load="true"
-              title="<i class='fas fa-bug'></i> <?=_("Tasks not billed")?>"
-    ></bbns-tab>
+              title="<i class='nf nf-fa-bug'></i> <?=_("Tasks not billed")?>"
+    ></bbns-container>
   </bbn-tabnav>
 </div>

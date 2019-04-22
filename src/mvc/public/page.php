@@ -8,5 +8,5 @@
 
 $ctrl->obj->url = APPUI_BILLING_ROOT . 'page';
 $ctrl
-  ->set_icon('fas fa-file-invoice')
+  ->set_icon('nf nf-fa-file_invoice')
   ->combo(_("Billing"), true);

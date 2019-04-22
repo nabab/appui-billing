@@ -41,7 +41,7 @@
           return [{
             title: bbn._('Open task'),
             command: this.openTask,
-            icon: 'fas fa-bug'
+            icon: 'nf nf-fa-bug'
           }];
         }
         return [];
@@ -82,7 +82,7 @@
           return {
             currentYear: moment().format('YYYY'),
             maxYear: moment().toDate(),
-            cp: bbn.vue.closest(this, 'bbns-tab').getComponent()
+            cp: bbn.vue.closest(this, 'bbns-container').getComponent()
           }
         },
         methods: {

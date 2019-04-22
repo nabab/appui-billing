@@ -41,7 +41,7 @@
   ></bbns-column>
   <bbns-column :buttons="[{
                  title: '<?=_('See the task')?>',
-                 icon: 'fas fa-bug',
+                 icon: 'nf nf-fa-bug',
                  command: openTask
                }]"
                cls="bbn-c"

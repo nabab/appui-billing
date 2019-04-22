@@ -58,7 +58,7 @@
                :buttons="[{
                  title: '<?=_('Get PDF')?>',
                  command: getPDF,
-                 icon: 'fas fa-file-pdf'
+                 icon: 'nf nf-fa-file_pdf'
                }]"
                :filterable="false"
   ></bbns-column>

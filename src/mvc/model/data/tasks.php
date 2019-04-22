@@ -1,10 +1,10 @@
 <?php
 if (
   isset($model->data['limit'], $model->data['start']) &&
-  ($closed_opt = $model->inc->options->from_code('closed', 'states', 'tasks', 'appui')) &&
-  ($close_opt = $model->inc->options->from_code('task_close', 'actions', 'tasks', 'appui')) &&
-  ($approve_opt = $model->inc->options->from_code('price_approved', 'actions', 'tasks', 'appui')) &&
-  ($price_opt = $model->inc->options->from_code('price_update', 'actions', 'tasks', 'appui'))
+  ($closed_opt = \bbn\appui\tasks::get_appui_option_id('closed', 'states')) &&
+  ($close_opt = \bbn\appui\tasks::get_appui_option_id('task_close', 'actions')) &&
+  ($approve_opt = \bbn\appui\tasks::get_appui_option_id('price_approved', 'actions')) &&
+  ($price_opt = \bbn\appui\tasks::get_appui_option_id('price_update', 'actions'))
 ){
 /*  return [
     'data' => $model->db->get_rows("
