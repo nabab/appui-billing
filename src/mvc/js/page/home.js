@@ -70,7 +70,6 @@
                   depth="decade"
                   format="yyyy"
                   value-format="yyyy"
-                  :parse-formats="['yyyy', 'yyyy']"
                   mask="0000"
                   :footer="false"
                   :input-readonly="true"
@@ -81,7 +80,7 @@
         data(){
           return {
             currentYear: moment().format('YYYY'),
-            maxYear: moment().toDate(),
+            maxYear: moment().format('YYYY-MM-DD HH:mm:ss'),
             cp: bbn.vue.closest(this, 'bbns-container').getComponent()
           }
         },
