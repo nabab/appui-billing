@@ -1,4 +1,4 @@
-<div class="appui-billing bbn-full-screen">
+<div class="appui-billing bbn-overlay">
   <bbn-tabnav class="appui_billing_tabnav"
               :scrollable="true"
               :autoload="true"
