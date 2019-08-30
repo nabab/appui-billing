@@ -17,7 +17,7 @@ if (
   ]) &&
   ($id_invoice = $model->db->last_id())
 ){
-  $path = BBN_DATA_PATH . 'plugins/appui-billing/';
+  $path = $model->data_path('appui-billing');
   $medias = new \bbn\appui\medias($model->db);
   $pdf = new \bbn\file\pdf2([
     'template' => $path.'paper.pdf',
