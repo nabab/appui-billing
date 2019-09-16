@@ -51,7 +51,7 @@
       },
       getPDF(row){
         if ( row.id_media ){
-          bbn.fn.post_out(this.root + 'actions/pdf', {
+          this.post_out(this.root + 'actions/pdf', {
             id_media: row.id_media
           });
         }
