@@ -19,7 +19,7 @@ if (
 ){
   $path = $model->data_path('appui-billing');
   $medias = new \bbn\appui\medias($model->db);
-  $pdf = new \bbn\file\pdf2([
+  $pdf = new \bbn\file\pdf([
     'template' => $path.'paper.pdf',
     'mgt' => 60,
     'mgl'=> 0,
