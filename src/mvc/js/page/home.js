@@ -64,7 +64,7 @@
       toolbar: {
         template: `
 <div>
-  <span>${bbn._('Year')}: </span>
+  <span>`+ bbn._('Year') + `: </span>
   <bbn-datepicker :max="maxYear"
                   v-model="currentYear"
                   depth="decade"
