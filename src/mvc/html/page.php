@@ -6,12 +6,14 @@
     <bbns-container url="home"
               :static="true"
               :load="true"
-              title="<i class='nf nf-fa-home'></i> <?=_("Invoices")?>"
+              title="<?=_("Invoices")?>"
+              icon="nf nf-fa-home"
     ></bbns-container>
     <bbns-container url="tasks"
               :static="true"
               :load="true"
-              title="<i class='nf nf-fa-bug'></i> <?=_("Tasks not billed")?>"
+              title="<?=_("Tasks not billed")?>"
+              icon="nf nf-fa-bug"
     ></bbns-container>
   </bbn-tabnav>
 </div>

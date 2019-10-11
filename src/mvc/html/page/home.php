@@ -57,8 +57,8 @@
                :width="70"
                :buttons="[{
                  title: '<?=_('Get PDF')?>',
-                 command: getPDF,
-                 icon: 'nf nf-fa-file_pdf'
+                 action: getPDF,
+                 icon: 'nf nf-fa-file_pdf_o'
                }]"
                :filterable="false"
   ></bbns-column>

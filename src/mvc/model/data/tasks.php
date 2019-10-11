@@ -73,10 +73,8 @@ if (
       'table' => 'bbn_tasks_invoices',
       'type' => 'left',
       'on' => [
-        'logic' => "AND",
         'conditions' => [[
           'field' => "bbn_tasks_invoices.id_task",
-          'operator' => 'eq',
           'exp' => "bbn_tasks.id"
         ]]
       ]
@@ -84,10 +82,8 @@ if (
       'table' => 'bbn_tasks_logs',
       'alias' => 'log_close',
       'on' => [
-        'logic' => "AND",
         'conditions' => [[
           'field' => "log_close.id_task",
-          'operator' => 'eq',
           'exp' => "bbn_tasks.id"
         ]]
       ]
@@ -95,10 +91,8 @@ if (
       'table' => 'bbn_tasks_logs',
       'alias' => 'log_approve',
       'on' => [
-        'logic' => "AND",
         'conditions' => [[
           'field' => "log_approve.id_task",
-          'operator' => 'eq',
           'exp' => "bbn_tasks.id"
         ]]
       ]
@@ -107,47 +101,38 @@ if (
       'alias' => 'log_price',
       'type' => 'left',
       'on' => [
-        'logic' => 'AND',
         'conditions' => [[
           'field' => "log_price.id_task",
-          'operator' => 'eq',
           'exp' => "bbn_tasks.id"
         ], [
           'field' => "log_price.action",
-          'operator' => 'eq',
           'value' => $price_opt
         ]]
       ]
     ]],
     'filters' => [
-      'logic' => 'AND',
       'conditions' => [[
         'field' => 'bbn_tasks_invoices.id_invoice',
         'operator' => 'isnull'
       ], [
         'field' => 'bbn_tasks.state',
-        'operator' => 'eq',
         'value' => $closed_opt
       ], [
         'field' => 'bbn_tasks.price',
         'operator' => 'isnotnull'
       ], [
         'field' => 'log_close.action',
-        'operator' => 'eq',
         'value' => $close_opt
       ], [
         'field' => 'log_approve.action',
-        'operator' => 'eq',
         'value' => $approve_opt
       ], [
         'field' => 'bbn_tasks.active',
-        'operator' => 'eq',
         'value' => 1
       ]]
     ],
     'group_by' => ['bbn_tasks.id'],
     'having' => [
-      'logic' => 'AND',
       'conditions' => [[
         'field' => "close_date",
         'operator' => '>',
@@ -164,10 +149,10 @@ if (
         ]]
       ]]
     ],
-    'order' => [
+    'order' => [[
       'field' => 'close_date',
       'dir' => 'DESC'
-    ],
+    ]],
   ]);
 
   if ( $grid->check() ){

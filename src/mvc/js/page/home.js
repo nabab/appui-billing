@@ -40,7 +40,7 @@
         if ( row.id_task ){
           return [{
             title: bbn._('Open task'),
-            command: this.openTask,
+            action: this.openTask,
             icon: 'nf nf-fa-bug'
           }];
         }
@@ -67,13 +67,9 @@
   <span>`+ bbn._('Year') + `: </span>
   <bbn-datepicker :max="maxYear"
                   v-model="currentYear"
-                  depth="decade"
-                  format="yyyy"
-                  value-format="yyyy"
-                  mask="0000"
-                  :footer="false"
+                  type="years"
                   :input-readonly="true"
-                  style="width: 80px"
+                  :autosize="true"
   ></bbn-datepicker>
 </div>
         `,
@@ -81,11 +77,8 @@
           return {
             currentYear: moment().format('YYYY'),
             maxYear: moment().format('YYYY-MM-DD HH:mm:ss'),
-            cp: bbn.vue.closest(this, 'bbns-container').getComponent()
+            cp: this.closest('bbn-container').getComponent()
           }
-        },
-        methods: {
-
         },
         watch: {
           currentYear(newVal){
