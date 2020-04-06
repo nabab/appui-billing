@@ -1,7 +1,7 @@
 <div class="appui-billing bbn-overlay">
-  <bbn-tabnav class="appui_billing_tabnav"
-              :scrollable="true"
+  <bbn-router :scrollable="true"
               :autoload="true"
+              :nav=true"
   >
     <bbns-container url="home"
               :static="true"
@@ -15,5 +15,5 @@
               title="<?=_("Tasks not billed")?>"
               icon="nf nf-fa-bug"
     ></bbns-container>
-  </bbn-tabnav>
+  </bbn-router>
 </div>
