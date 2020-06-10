@@ -51,7 +51,7 @@
       },
       getPDF(row){
         if ( row.id_media ){
-          this.post_out(this.root + 'actions/pdf', {
+          this.postOut(this.root + 'actions/pdf', {
             id_media: row.id_media
           });
         }
