@@ -1,15 +1,9 @@
 {
-  "data": [
-    {
-      "text": "Billing",
-      "icon": "nf nf-fa-credit_card",
-      "items": [
-        {
-          "text": "tasks",
-          "icon": "nf nf-fa-euro",
-          "link": "page"
-        }
-      ]
-    }
-  ]
+  "text": "Billing",
+  "icon": "nf nf-fa-credit_card",
+  "items": [{
+    "text": "Tasks",
+    "icon": "nf nf-fa-euro",
+    "link": "page"
+  }]
 }

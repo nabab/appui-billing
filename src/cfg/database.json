@@ -62,7 +62,7 @@
                 "columns": [
                     "id_media"
                 ],
-                "ref_db": "apst_app",
+                "ref_db": null,
                 "ref_table": "bbn_medias",
                 "ref_column": "id",
                 "constraint": "bbn_invoices_ibfk_1",
