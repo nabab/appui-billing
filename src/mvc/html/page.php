@@ -1,7 +1,7 @@
 <div class="appui-billing bbn-overlay">
   <bbn-router :scrollable="true"
               :autoload="true"
-              :nav=true"
+              :nav="true"
   >
     <bbns-container url="home"
               :static="true"
