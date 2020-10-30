@@ -1,9 +1,13 @@
 {
   "text": "Billing",
+  "num": 21,
   "icon": "nf nf-fa-credit_card",
-  "items": [{
-    "text": "Tasks",
-    "icon": "nf nf-fa-euro",
-    "link": "page"
-  }]
+  "items": [
+    {
+      "text": "tasks",
+      "num": 1,
+      "icon": "nf nf-fa-euro",
+      "link": "page"
+    }
+  ]
 }
