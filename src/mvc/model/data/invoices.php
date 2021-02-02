@@ -1,8 +1,8 @@
 <?php
 if ( isset($model->data['start'], $model->data['limit']) ){
-  $grid = new \bbn\appui\grid($model->db, $model->data, [
+  $grid = new \bbn\Appui\Grid($model->db, $model->data, [
     'tables' => ['bbn_invoices'],
-    'fields' => array_merge($model->db->get_fields_list('bbn_invoices'), ['bbn_tasks_invoices.id_task']),
+    'fields' => array_merge($model->db->getFieldsList('bbn_invoices'), ['bbn_tasks_invoices.id_task']),
     'join' => [[
       'table' => 'bbn_tasks_invoices',
       'type' => 'left',
@@ -21,6 +21,6 @@ if ( isset($model->data['start'], $model->data['limit']) ){
   ]);
 
   if ( $grid->check() ){
-    return $grid->get_datatable();
+    return $grid->getDatatable();
   }
 }

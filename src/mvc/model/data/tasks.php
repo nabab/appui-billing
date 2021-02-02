@@ -1,13 +1,13 @@
 <?php
 if (
   isset($model->data['limit'], $model->data['start']) &&
-  ($closed_opt = \bbn\appui\task::get_appui_option_id('closed', 'states')) &&
-  ($close_opt = \bbn\appui\task::get_appui_option_id('task_close', 'actions')) &&
-  ($approve_opt = \bbn\appui\task::get_appui_option_id('price_approved', 'actions')) &&
-  ($price_opt = \bbn\appui\task::get_appui_option_id('price_update', 'actions'))
+  ($closed_opt = \bbn\Appui\Task::getAppuiOptionId('closed', 'states')) &&
+  ($close_opt = \bbn\Appui\Task::getAppuiOptionId('task_close', 'actions')) &&
+  ($approve_opt = \bbn\Appui\Task::getAppuiOptionId('price_approved', 'actions')) &&
+  ($price_opt = \bbn\Appui\Task::getAppuiOptionId('price_update', 'actions'))
 ){
 /*  return [
-    'data' => $model->db->get_rows("
+    'data' => $model->db->getRows("
       SELECT bbn_tasks.*,
         MAX(log_close.chrono) AS close_date, log_close.id_user AS close_user,
         MAX(log_approve.chrono) AS approve_date, log_approve.id_user AS approve_user,
@@ -47,7 +47,7 @@ if (
   ];
 */
 
-  $grid = new \bbn\appui\grid($model->db, $model->data, [
+  $grid = new \bbn\Appui\Grid($model->db, $model->data, [
     'tables' => ['bbn_tasks'],
     'fields' => [
       'bbn_tasks.id',
@@ -156,6 +156,6 @@ if (
   ]);
 
   if ( $grid->check() ){
-    return $grid->get_datatable();
+    return $grid->getDatatable();
   }
 }

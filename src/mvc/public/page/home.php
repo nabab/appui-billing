@@ -1,2 +1,2 @@
 <?php
-$ctrl->set_icon("nf nf-fa-home")->combo(_("Invoices"));
+$ctrl->setIcon("nf nf-fa-home")->combo(_("Invoices"));

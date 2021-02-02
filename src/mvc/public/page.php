@@ -4,9 +4,9 @@
  *
  **/
 
-/** @var $ctrl \bbn\mvc\controller */
+/** @var $ctrl \bbn\Mvc\Controller */
 
 $ctrl->obj->url = APPUI_BILLING_ROOT . 'page';
 $ctrl
-  ->set_icon('nf nf-mdi-file_document')
+  ->setIcon('nf nf-mdi-file_document')
   ->combo(_("Billing"), true);
