@@ -28,7 +28,7 @@ if (
   ]);
   // Make page text
   $template = file_get_contents($path.'template.html');
-  $template = str_replace('{{creation}}', Date('d M Y', Strtotime($model->data['creation'])), $template);
+  $template = str_replace('{{creation}}', Date('d M Y', strtotime($model->data['creation'])), $template);
   $template = str_replace('{{ref}}', $model->data['ref'], $template);
   if ( !empty($model->data['approved']) ){
     $template = str_replace('{{show_approved}}', 'table-cell', $template);
@@ -38,7 +38,7 @@ if (
   else {
     $template = str_replace('{{show_approved}}', 'none', $template);
   }
-  $year = date('Y', Strtotime($model->data['creation']));
+  $year = date('Y', strtotime($model->data['creation']));
   $template = str_replace('{{year}}', $year, $template);
   $template = str_replace('{{description}}', $model->data['description'], $template);
   $template = str_replace('{{taxable}}', number_format((float)$model->data['taxable'], 2, ',', '.') .' €', $template);
