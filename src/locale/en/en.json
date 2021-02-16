@@ -1,1 +1,6 @@
-{"":{"Open task":"Open task","Year":"Year"}}
+{
+    "mvc\/page\/home": {
+        "Open task": "Open task",
+        "Year": "Year"
+    }
+}

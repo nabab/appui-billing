@@ -3,106 +3,106 @@ msgstr ""
 "Project-Id-Version: 1\n"
 "Report-Msgid-Bugs-To: info@bbn.so\n"
 "last-Translator: BBN Solutions <support@bbn.solutions>\n"
-"Language-Team: EN <EN@li.org>\n"
+"Language-Team: ES <ES@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-02-15 01:09+0100\n"
-"POT-Revision-Date: 2021-02-15 01:09+0100\n"
-"Language: en\n"
+"POT-Creation-Date: 2021-02-16 05:17+0100\n"
+"POT-Revision-Date: 2021-02-16 05:17+0100\n"
+"Language: es\n"
 "X-Domain: appui-billing\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-billing/src/mvc/html/page.php
 #: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-billing/src/mvc/public/page/home.php
 msgid "Invoices"
-msgstr "Invoices"
+msgstr ""
 
 #: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-billing/src/mvc/html/page.php
 #: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-billing/src/mvc/public/page/tasks.php
 msgid "Tasks not billed"
-msgstr "Tasks not billed"
+msgstr ""
 
 #: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-billing/src/mvc/html/page/home.php
 msgid "Ref"
-msgstr "Ref"
+msgstr ""
 
 #: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-billing/src/mvc/html/page/home.php
 msgid "Date"
-msgstr "Date"
+msgstr ""
 
 #: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-billing/src/mvc/html/page/home.php
 msgid "Description"
-msgstr "Description"
+msgstr ""
 
 #: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-billing/src/mvc/html/page/home.php
 msgid "Taxable"
-msgstr "Taxable"
+msgstr ""
 
 #: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-billing/src/mvc/html/page/home.php
 msgid "Tax"
-msgstr "Tax"
+msgstr ""
 
 #: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-billing/src/mvc/html/page/home.php
 msgid "Amount"
-msgstr "Amount"
+msgstr ""
 
 #: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-billing/src/mvc/html/page/home.php
 msgid "Task"
-msgstr "Task"
+msgstr ""
 
 #: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-billing/src/mvc/html/page/home.php
 msgid "PDF"
-msgstr "PDF"
+msgstr ""
 
 #: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-billing/src/mvc/html/page/home.php
 msgid "Get PDF"
-msgstr "Get PDF"
+msgstr ""
 
 #: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-billing/src/mvc/html/page/tasks.php
 msgid "Title"
-msgstr "Title"
+msgstr ""
 
 #: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-billing/src/mvc/html/page/tasks.php
 msgid "Created on"
-msgstr "Created on"
+msgstr ""
 
 #: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-billing/src/mvc/html/page/tasks.php
 msgid "Created by"
-msgstr "Created by"
+msgstr ""
 
 #: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-billing/src/mvc/html/page/tasks.php
 msgid "Approved on"
-msgstr "Approved on"
+msgstr ""
 
 #: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-billing/src/mvc/html/page/tasks.php
 msgid "Approved by"
-msgstr "Approved by"
+msgstr ""
 
 #: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-billing/src/mvc/html/page/tasks.php
 msgid "Closed on"
-msgstr "Closed on"
+msgstr ""
 
 #: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-billing/src/mvc/html/page/tasks.php
 msgid "Closed by"
-msgstr "Closed by"
+msgstr ""
 
 #: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-billing/src/mvc/html/page/tasks.php
 msgid "Price"
-msgstr "Price"
+msgstr ""
 
 #: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-billing/src/mvc/html/page/tasks.php
 msgid "See the task"
-msgstr "See the task"
+msgstr ""
 
 #: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-billing/src/mvc/js/page/home.js
 msgid "Open task"
-msgstr "Open task"
+msgstr ""
 
 #: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-billing/src/mvc/js/page/home.js
 msgid "Year"
-msgstr "Year"
+msgstr ""
 
 #: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-billing/src/mvc/public/page.php
 msgid "Billing"
-msgstr "Billing"
+msgstr ""

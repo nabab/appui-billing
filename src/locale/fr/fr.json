@@ -1,1 +1,6 @@
-{"":{"Open task":"Ouvrir la t\u00e2che","Year":"Ann\u00e9e"}}
+{
+    "mvc\/page\/home": {
+        "Open task": "Ouvrir la t\u00e2che",
+        "Year": "Ann\u00e9e"
+    }
+}
