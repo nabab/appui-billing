@@ -25,10 +25,7 @@
                 "type": "binary",
                 "null": 0,
                 "key": "PRI",
-                "extra": "",
                 "signed": true,
-                "virtual": false,
-                "generation": "",
                 "maxlength": 16
             },
             "name": {
@@ -36,10 +33,7 @@
                 "type": "varchar",
                 "null": 0,
                 "key": null,
-                "extra": "",
                 "signed": true,
-                "virtual": false,
-                "generation": "",
                 "maxlength": 100
             }
         }
@@ -85,10 +79,7 @@
                 "type": "binary",
                 "null": 0,
                 "key": "PRI",
-                "extra": "",
                 "signed": true,
-                "virtual": false,
-                "generation": "",
                 "maxlength": 16
             },
             "id_media": {
@@ -96,10 +87,7 @@
                 "type": "binary",
                 "null": 1,
                 "key": "MUL",
-                "extra": "",
                 "signed": true,
-                "virtual": false,
-                "generation": "",
                 "default": "NULL",
                 "maxlength": 16
             },
@@ -108,10 +96,6 @@
                 "type": "int",
                 "null": 0,
                 "key": null,
-                "extra": "",
-                "signed": false,
-                "virtual": false,
-                "generation": "",
                 "maxlength": 5
             },
             "ref_year": {
@@ -131,9 +115,7 @@
                 "type": "datetime",
                 "null": 0,
                 "key": null,
-                "extra": "",
                 "signed": true,
-                "virtual": false,
                 "generation": ""
             },
             "description": {
@@ -141,9 +123,7 @@
                 "type": "text",
                 "null": 0,
                 "key": null,
-                "extra": "",
                 "signed": true,
-                "virtual": false,
                 "generation": ""
             },
             "tax": {
@@ -151,10 +131,6 @@
                 "type": "int",
                 "null": 1,
                 "key": null,
-                "extra": "",
-                "signed": false,
-                "virtual": false,
-                "generation": "",
                 "default": "NULL",
                 "maxlength": 10
             },
@@ -163,10 +139,6 @@
                 "type": "decimal",
                 "null": 1,
                 "key": null,
-                "extra": "",
-                "signed": false,
-                "virtual": false,
-                "generation": "",
                 "default": "NULL",
                 "maxlength": 14,
                 "decimals": 2
@@ -176,10 +148,6 @@
                 "type": "decimal",
                 "null": 1,
                 "key": null,
-                "extra": "",
-                "signed": false,
-                "virtual": false,
-                "generation": "",
                 "default": "NULL",
                 "maxlength": 14,
                 "decimals": 2
