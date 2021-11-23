@@ -3,7 +3,7 @@
     data(){
       return {
         root: appui.plugins['appui-billing'] + '/',
-        year: moment().format('YYYY')
+        year: dayjs().format('YYYY')
       }
     },
     computed: {
@@ -75,8 +75,8 @@
         `,
         data(){
           return {
-            currentYear: moment().format('YYYY'),
-            maxYear: moment().format('YYYY-MM-DD HH:mm:ss'),
+            currentYear: dayjs().format('YYYY'),
+            maxYear: dayjs().format('YYYY-MM-DD HH:mm:ss'),
             cp: this.closest('bbn-container').getComponent()
           }
         },
