@@ -21,7 +21,6 @@
         },
         "fields": {
             "id": {
-                "position": 1,
                 "type": "binary",
                 "null": 0,
                 "key": "PRI",
@@ -29,7 +28,6 @@
                 "maxlength": 16
             },
             "name": {
-                "position": 2,
                 "type": "varchar",
                 "null": 0,
                 "key": null,
@@ -75,7 +73,6 @@
         },
         "fields": {
             "id": {
-                "position": 1,
                 "type": "binary",
                 "null": 0,
                 "key": "PRI",
@@ -83,7 +80,6 @@
                 "maxlength": 16
             },
             "id_media": {
-                "position": 2,
                 "type": "binary",
                 "null": 1,
                 "key": "MUL",
@@ -92,14 +88,12 @@
                 "maxlength": 16
             },
             "ref": {
-                "position": 3,
                 "type": "int",
                 "null": 0,
                 "key": null,
                 "maxlength": 5
             },
             "ref_year": {
-                "position": 4,
                 "type": "year",
                 "null": 1,
                 "key": null,
@@ -111,7 +105,6 @@
                 "maxlength": 4
             },
             "creation": {
-                "position": 5,
                 "type": "datetime",
                 "null": 0,
                 "key": null,
@@ -119,7 +112,6 @@
                 "generation": ""
             },
             "description": {
-                "position": 6,
                 "type": "text",
                 "null": 0,
                 "key": null,
@@ -127,7 +119,6 @@
                 "generation": ""
             },
             "tax": {
-                "position": 7,
                 "type": "int",
                 "null": 1,
                 "key": null,
@@ -135,7 +126,6 @@
                 "maxlength": 10
             },
             "taxable": {
-                "position": 8,
                 "type": "decimal",
                 "null": 1,
                 "key": null,
@@ -144,7 +134,6 @@
                 "decimals": 2
             },
             "amount": {
-                "position": 9,
                 "type": "decimal",
                 "null": 1,
                 "key": null,
