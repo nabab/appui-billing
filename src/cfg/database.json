@@ -5,12 +5,6 @@
                 "columns": [
                     "id"
                 ],
-                "ref_db": null,
-                "ref_table": null,
-                "ref_column": null,
-                "constraint": null,
-                "update": null,
-                "delete": null,
                 "unique": 1
             }
         },
@@ -42,19 +36,12 @@
                 "columns": [
                     "id"
                 ],
-                "ref_db": null,
-                "ref_table": null,
-                "ref_column": null,
-                "constraint": null,
-                "update": null,
-                "delete": null,
                 "unique": 1
             },
             "id_media": {
                 "columns": [
                     "id_media"
                 ],
-                "ref_db": null,
                 "ref_table": "bbn_medias",
                 "ref_column": "id",
                 "constraint": "bbn_invoices_ibfk_1",
