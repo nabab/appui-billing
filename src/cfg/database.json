@@ -1,133 +1,1688 @@
 {
-    "bbn_clients": {
-        "keys": {
-            "PRIMARY": {
-                "columns": [
-                    "id"
-                ],
-                "unique": 1
-            }
-        },
-        "cols": {
-            "id": [
-                "PRIMARY"
-            ]
-        },
-        "fields": {
-            "id": {
-                "type": "binary",
-                "null": 0,
-                "key": "PRI",
-                "signed": true,
-                "maxlength": 16
-            },
-            "name": {
-                "type": "varchar",
-                "null": 0,
-                "key": null,
-                "signed": true,
-                "maxlength": 100
-            }
-        }
+  "bbn_clients": {
+    "keys": {
+      "PRIMARY": {
+        "columns": [
+          "id"
+        ],
+        "unique": 1
+      }
     },
-    "bbn_invoices": {
-        "keys": {
-            "PRIMARY": {
-                "columns": [
-                    "id"
-                ],
-                "unique": 1
-            },
-            "id_media": {
-                "columns": [
-                    "id_media"
-                ],
-                "ref_table": "bbn_medias",
-                "ref_column": "id",
-                "constraint": "bbn_invoices_ibfk_1",
-                "update": "SET NULL",
-                "delete": "SET NULL",
-                "unique": 0
-            }
-        },
-        "cols": {
-            "id": [
-                "PRIMARY"
-            ],
-            "id_media": [
-                "id_media"
-            ]
-        },
-        "fields": {
-            "id": {
-                "type": "binary",
-                "null": 0,
-                "key": "PRI",
-                "signed": true,
-                "maxlength": 16
-            },
-            "id_media": {
-                "type": "binary",
-                "null": 1,
-                "key": "MUL",
-                "signed": true,
-                "default": "NULL",
-                "maxlength": 16
-            },
-            "ref": {
-                "type": "int",
-                "null": 0,
-                "key": null,
-                "maxlength": 5
-            },
-            "ref_year": {
-                "type": "year",
-                "null": 1,
-                "key": null,
-                "extra": "VIRTUAL GENERATED",
-                "signed": true,
-                "virtual": true,
-                "generation": "year(`creation`)",
-                "default": "NULL",
-                "maxlength": 4
-            },
-            "creation": {
-                "type": "datetime",
-                "null": 0,
-                "key": null,
-                "signed": true,
-                "generation": ""
-            },
-            "description": {
-                "type": "text",
-                "null": 0,
-                "key": null,
-                "signed": true,
-                "generation": ""
-            },
-            "tax": {
-                "type": "int",
-                "null": 1,
-                "key": null,
-                "default": "NULL",
-                "maxlength": 10
-            },
-            "taxable": {
-                "type": "decimal",
-                "null": 1,
-                "key": null,
-                "default": "NULL",
-                "maxlength": 14,
-                "decimals": 2
-            },
-            "amount": {
-                "type": "decimal",
-                "null": 1,
-                "key": null,
-                "default": "NULL",
-                "maxlength": 14,
-                "decimals": 2
-            }
-        }
+    "cols": {
+      "id": [
+        "PRIMARY"
+      ]
+    },
+    "fields": {
+      "id": {
+        "type": "binary",
+        "null": 0,
+        "key": "PRI",
+        "signed": true,
+        "maxlength": 16
+      },
+      "name": {
+        "type": "varchar",
+        "null": 0,
+        "key": null,
+        "signed": true,
+        "maxlength": 100
+      }
     }
+  },
+  "bbn_invoices": {
+    "keys": {
+      "PRIMARY": {
+        "columns": [
+          "id"
+        ],
+        "unique": 1
+      },
+      "id_media": {
+        "columns": [
+          "id_media"
+        ],
+        "ref_table": "bbn_medias",
+        "ref_column": "id",
+        "constraint": "bbn_invoices_ibfk_1",
+        "update": "SET NULL",
+        "delete": "SET NULL",
+        "unique": 0
+      }
+    },
+    "cols": {
+      "id": [
+        "PRIMARY"
+      ],
+      "id_media": [
+        "id_media"
+      ]
+    },
+    "fields": {
+      "id": {
+        "type": "binary",
+        "null": 0,
+        "key": "PRI",
+        "signed": true,
+        "maxlength": 16
+      },
+      "id_media": {
+        "type": "binary",
+        "null": 1,
+        "key": "MUL",
+        "signed": true,
+        "default": "NULL",
+        "maxlength": 16
+      },
+      "ref": {
+        "type": "int",
+        "null": 0,
+        "key": null,
+        "maxlength": 5
+      },
+      "ref_year": {
+        "type": "year",
+        "null": 1,
+        "key": null,
+        "extra": "VIRTUAL GENERATED",
+        "signed": true,
+        "virtual": true,
+        "generation": "year(`creation`)",
+        "default": "NULL",
+        "maxlength": 4
+      },
+      "creation": {
+        "type": "datetime",
+        "null": 0,
+        "key": null,
+        "signed": true,
+        "generation": ""
+      },
+      "description": {
+        "type": "text",
+        "null": 0,
+        "key": null,
+        "signed": true,
+        "generation": ""
+      },
+      "tax": {
+        "type": "int",
+        "null": 1,
+        "key": null,
+        "default": "NULL",
+        "maxlength": 10
+      },
+      "taxable": {
+        "type": "decimal",
+        "null": 1,
+        "key": null,
+        "default": "NULL",
+        "maxlength": 14,
+        "decimals": 2
+      },
+      "amount": {
+        "type": "decimal",
+        "null": 1,
+        "key": null,
+        "default": "NULL",
+        "maxlength": 14,
+        "decimals": 2
+      }
+    }
+  },
+  "bbn_accounting_accounts": {
+    "keys": {
+      "PRIMARY": {
+        "columns": [
+          "id"
+        ],
+        "ref_table": "bbn_history_uids",
+        "ref_column": "bbn_uid",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 1
+      },
+      "id_entity": {
+        "columns": [
+          "id_entity"
+        ],
+        "ref_table": "bbn_accounting_entities",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      },
+      "id_bank": {
+        "columns": [
+          "id_bank"
+        ],
+        "ref_table": "bbn_accounting_banks",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      },
+      "id_currency": {
+        "columns": [
+          "id_currency"
+        ],
+        "ref_table": "bbn_options",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      }
+    },
+    "cols": {
+      "id": [
+        "PRIMARY"
+      ],
+      "id_entity": [
+        "id_entity"
+      ],
+      "id_bank": [
+        "id_bank"
+      ],
+      "id_currency": [
+        "id_currency"
+      ]
+    },
+    "fields": {
+      "id": {
+        "type": "binary",
+        "null": 0,
+        "key": "PRI",
+        "maxlength": 16
+      },
+      "name": {
+        "type": "varchar",
+        "null": 0,
+        "maxlength": 50
+      },
+      "account_number": {
+        "type": "varchar",
+        "null": 0,
+        "maxlength": 50
+      },
+      "id_entity": {
+        "type": "binary",
+        "null": 0,
+        "key": "MUL",
+        "maxlength": 16
+      },
+      "id_bank": {
+        "type": "binary",
+        "null": 0,
+        "key": "MUL",
+        "maxlength": 16
+      },
+      "id_currency": {
+        "type": "binary",
+        "null": 0,
+        "key": "MUL",
+        "maxlength": 16
+      }
+    }
+  },
+  "bbn_accounting_banks": {
+    "keys": {
+      "PRIMARY": {
+        "columns": [
+          "id"
+        ],
+        "ref_table": "bbn_history_uids",
+        "ref_column": "bbn_uid",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 1
+      },
+      "id_address": {
+        "columns": [
+          "id_address"
+        ],
+        "ref_table": "bbn_addresses",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      }
+    },
+    "cols": {
+      "id": [
+        "PRIMARY"
+      ],
+      "id_address": [
+        "id_address"
+      ]
+    },
+    "fields": {
+      "id": {
+        "type": "binary",
+        "null": 0,
+        "key": "PRI",
+        "maxlength": 16
+      },
+      "name": {
+        "type": "varchar",
+        "null": 0,
+        "maxlength": 100
+      },
+      "id_address": {
+        "type": "binary",
+        "null": 0,
+        "key": "MUL",
+        "maxlength": 16
+      }
+    }
+  },
+  "bbn_accounting_bills": {
+    "keys": {
+      "PRIMARY": {
+        "columns": [
+          "id"
+        ],
+        "ref_table": "bbn_history_uids",
+        "ref_column": "bbn_uid",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 1
+      },
+      "id_entity": {
+        "columns": [
+          "id_entity"
+        ],
+        "ref_table": "bbn_accounting_entities",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      },
+      "id_currency": {
+        "columns": [
+          "id_currency"
+        ],
+        "ref_table": "bbn_options",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      },
+      "id_contact": {
+        "columns": [
+          "id_contact"
+        ],
+        "ref_table": "bbn_people",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      }
+    },
+    "cols": {
+      "id": [
+        "PRIMARY"
+      ],
+      "id_entity": [
+        "id_entity"
+      ],
+      "id_currency": [
+        "id_currency"
+      ],
+      "id_contact": [
+        "id_contact"
+      ]
+    },
+    "fields": {
+      "id": {
+        "type": "binary",
+        "null": 0,
+        "key": "PRI",
+        "maxlength": 16
+      },
+      "id_entity": {
+        "type": "binary",
+        "null": 0,
+        "key": "MUL",
+        "maxlength": 16
+      },
+      "order_number": {
+        "type": "varchar",
+        "null": 0,
+        "default": "''",
+        "defaultExpression": false,
+        "maxlength": 50
+      },
+      "bill_number": {
+        "type": "varchar",
+        "null": 0,
+        "default": "''",
+        "defaultExpression": false,
+        "maxlength": 50
+      },
+      "status": {
+        "type": "varchar",
+        "null": 0,
+        "default": "'CREATED'",
+        "defaultExpression": false,
+        "maxlength": 10
+      },
+      "billd": {
+        "type": "datetime",
+        "null": 0
+      },
+      "due": {
+        "type": "date",
+        "null": 0
+      },
+      "amount": {
+        "type": "decimal",
+        "null": 0,
+        "signed": 1,
+        "maxlength": 20,
+        "decimals": 0
+      },
+      "id_category": {
+        "type": "binary",
+        "null": 1,
+        "default": "NULL",
+        "defaultExpression": false,
+        "maxlength": 16
+      },
+      "id_currency": {
+        "type": "binary",
+        "null": 1,
+        "key": "MUL",
+        "default": "NULL",
+        "defaultExpression": false,
+        "maxlength": 16
+      },
+      "currency_rate": {
+        "type": "decimal",
+        "null": 0,
+        "signed": 0,
+        "default": 1,
+        "defaultExpression": false,
+        "maxlength": 20,
+        "decimals": 0
+      },
+      "id_contact": {
+        "type": "binary",
+        "null": 1,
+        "key": "MUL",
+        "default": "NULL",
+        "defaultExpression": false,
+        "maxlength": 16
+      },
+      "comment": {
+        "type": "text",
+        "null": 1,
+        "default": "NULL",
+        "defaultExpression": false
+      },
+      "deleted": {
+        "type": "datetime",
+        "null": 1,
+        "default": "NULL",
+        "defaultExpression": false
+      }
+    }
+  },
+  "bbn_accounting_bills_items": {
+    "keys": {
+      "PRIMARY": {
+        "columns": [
+          "id"
+        ],
+        "ref_table": "bbn_history_uids",
+        "ref_column": "bbn_uid",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 1
+      },
+      "id_entity": {
+        "columns": [
+          "id_entity"
+        ],
+        "ref_table": "bbn_accounting_entities",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      },
+      "id_bill": {
+        "columns": [
+          "id_bill"
+        ],
+        "ref_table": "bbn_accounting_bills",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      },
+      "id_item": {
+        "columns": [
+          "id_item"
+        ],
+        "ref_table": "bbn_accounting_items",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      }
+    },
+    "cols": {
+      "id": [
+        "PRIMARY"
+      ],
+      "id_entity": [
+        "id_entity"
+      ],
+      "id_bill": [
+        "id_bill"
+      ],
+      "id_item": [
+        "id_item"
+      ]
+    },
+    "fields": {
+      "id": {
+        "type": "binary",
+        "null": 0,
+        "key": "PRI",
+        "maxlength": 16
+      },
+      "id_entity": {
+        "type": "binary",
+        "null": 0,
+        "key": "MUL",
+        "maxlength": 16
+      },
+      "id_bill": {
+        "type": "binary",
+        "null": 0,
+        "key": "MUL",
+        "maxlength": 16
+      },
+      "id_item": {
+        "type": "binary",
+        "null": 0,
+        "key": "MUL",
+        "maxlength": 16
+      },
+      "ref": {
+        "type": "varchar",
+        "null": 1,
+        "default": "NULL",
+        "defaultExpression": false,
+        "maxlength": 100
+      },
+      "quantity": {
+        "type": "int",
+        "null": 0,
+        "signed": 0,
+        "default": 1,
+        "defaultExpression": false,
+        "maxlength": 5
+      },
+      "price": {
+        "type": "decimal",
+        "null": 0,
+        "signed": 0,
+        "maxlength": 20,
+        "decimals": 2
+      },
+      "total": {
+        "type": "decimal",
+        "null": 0,
+        "signed": 0,
+        "maxlength": 20,
+        "decimals": 2
+      },
+      "discount": {
+        "type": "decimal",
+        "null": 1,
+        "signed": 0,
+        "default": "NULL",
+        "defaultExpression": false,
+        "maxlength": 20,
+        "decimals": 2
+      },
+      "creation": {
+        "type": "datetime",
+        "null": 0,
+        "default": "current_timestamp()",
+        "defaultExpression": false
+      }
+    }
+  },
+  "bbn_accounting_bills_items_taxes": {
+    "keys": {
+      "PRIMARY": {
+        "columns": [
+          "id"
+        ],
+        "ref_table": "bbn_history_uids",
+        "ref_column": "bbn_uid",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 1
+      },
+      "id_entity": {
+        "columns": [
+          "id_entity"
+        ],
+        "ref_table": "bbn_accounting_entities",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      },
+      "id_bill": {
+        "columns": [
+          "id_bill"
+        ],
+        "ref_table": "bbn_accounting_bills",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      },
+      "id_bill_item": {
+        "columns": [
+          "id_bill_item"
+        ],
+        "ref_table": "bbn_accounting_bills_items",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      },
+      "id_tax": {
+        "columns": [
+          "id_tax"
+        ],
+        "ref_table": "bbn_accounting_taxes",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      }
+    },
+    "cols": {
+      "id": [
+        "PRIMARY"
+      ],
+      "id_entity": [
+        "id_entity"
+      ],
+      "id_bill": [
+        "id_bill"
+      ],
+      "id_bill_item": [
+        "id_bill_item"
+      ],
+      "id_tax": [
+        "id_tax"
+      ]
+    },
+    "fields": {
+      "id": {
+        "type": "binary",
+        "null": 0,
+        "key": "PRI",
+        "maxlength": 16
+      },
+      "id_entity": {
+        "type": "binary",
+        "null": 0,
+        "key": "MUL",
+        "maxlength": 16
+      },
+      "id_bill": {
+        "type": "binary",
+        "null": 0,
+        "key": "MUL",
+        "maxlength": 16
+      },
+      "id_bill_item": {
+        "type": "binary",
+        "null": 0,
+        "key": "MUL",
+        "maxlength": 16
+      },
+      "id_tax": {
+        "type": "binary",
+        "null": 1,
+        "key": "MUL",
+        "default": "NULL",
+        "defaultExpression": false,
+        "maxlength": 16
+      },
+      "name": {
+        "type": "varchar",
+        "null": 0,
+        "maxlength": 100
+      },
+      "amount": {
+        "type": "decimal",
+        "null": 0,
+        "signed": 0,
+        "maxlength": 20,
+        "decimals": 2
+      },
+      "creation": {
+        "type": "datetime",
+        "null": 0,
+        "default": "current_timestamp()",
+        "defaultExpression": false
+      }
+    }
+  },
+  "bbn_accounting_bills_transactions": {
+    "keys": {
+      "PRIMARY": {
+        "columns": [
+          "id_bill",
+          "id_transaction"
+        ],
+        "unique": 1
+      },
+      "id_bill": {
+        "columns": [
+          "id_bill"
+        ],
+        "ref_table": "bbn_accounting_bills",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      },
+      "id_transaction": {
+        "columns": [
+          "id_transaction"
+        ],
+        "ref_table": "bbn_accounting_transactions",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      }
+    },
+    "cols": {
+      "id_bill": [
+        "PRIMARY",
+        "id_bill"
+      ],
+      "id_transaction": [
+        "PRIMARY",
+        "id_transaction"
+      ]
+    },
+    "fields": {
+      "id_bill": {
+        "type": "binary",
+        "null": 0,
+        "key": "PRI",
+        "maxlength": 16
+      },
+      "id_transaction": {
+        "type": "binary",
+        "null": 0,
+        "key": "PRI",
+        "maxlength": 16
+      }
+    }
+  },
+  "bbn_accounting_entities": {
+    "keys": {
+      "PRIMARY": {
+        "columns": [
+          "id"
+        ],
+        "ref_table": "bbn_history_uids",
+        "ref_column": "bbn_uid",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 1
+      },
+      "id_address": {
+        "columns": [
+          "id_address"
+        ],
+        "ref_table": "bbn_addresses",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      },
+      "owner": {
+        "columns": [
+          "owner"
+        ],
+        "ref_table": "bbn_users",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      },
+      "id_country": {
+        "columns": [
+          "id_country"
+        ],
+        "ref_table": "bbn_options",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      }
+    },
+    "cols": {
+      "id": [
+        "PRIMARY"
+      ],
+      "id_address": [
+        "id_address"
+      ],
+      "owner": [
+        "owner"
+      ],
+      "id_country": [
+        "id_country"
+      ]
+    },
+    "fields": {
+      "id": {
+        "type": "binary",
+        "null": 0,
+        "key": "PRI",
+        "maxlength": 16
+      },
+      "name": {
+        "type": "varchar",
+        "null": 0,
+        "maxlength": 100
+      },
+      "id_address": {
+        "type": "binary",
+        "null": 0,
+        "key": "MUL",
+        "maxlength": 16
+      },
+      "owner": {
+        "type": "binary",
+        "null": 0,
+        "key": "MUL",
+        "maxlength": 16
+      },
+      "id_country": {
+        "type": "binary",
+        "null": 0,
+        "key": "MUL",
+        "maxlength": 16
+      },
+      "tax_number": {
+        "type": "varchar",
+        "null": 0,
+        "maxlength": 30
+      }
+    }
+  },
+  "bbn_accounting_invoices": {
+    "keys": {
+      "PRIMARY": {
+        "columns": [
+          "id"
+        ],
+        "ref_table": "bbn_history_uids",
+        "ref_column": "bbn_uid",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 1
+      },
+      "id_entity": {
+        "columns": [
+          "id_entity"
+        ],
+        "ref_table": "bbn_accounting_entities",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      },
+      "id_currency": {
+        "columns": [
+          "id_currency"
+        ],
+        "ref_table": "bbn_options",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      },
+      "id_contact": {
+        "columns": [
+          "id_contact"
+        ],
+        "ref_table": "bbn_people",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      }
+    },
+    "cols": {
+      "id": [
+        "PRIMARY"
+      ],
+      "id_entity": [
+        "id_entity"
+      ],
+      "id_currency": [
+        "id_currency"
+      ],
+      "id_contact": [
+        "id_contact"
+      ]
+    },
+    "fields": {
+      "id": {
+        "type": "binary",
+        "null": 0,
+        "key": "PRI",
+        "maxlength": 16
+      },
+      "id_entity": {
+        "type": "binary",
+        "null": 0,
+        "key": "MUL",
+        "maxlength": 16
+      },
+      "order_number": {
+        "type": "varchar",
+        "null": 0,
+        "default": "''",
+        "defaultExpression": false,
+        "maxlength": 50
+      },
+      "invoice_number": {
+        "type": "varchar",
+        "null": 0,
+        "default": "''",
+        "defaultExpression": false,
+        "maxlength": 50
+      },
+      "status": {
+        "type": "varchar",
+        "null": 0,
+        "default": "'CREATED'",
+        "defaultExpression": false,
+        "maxlength": 10
+      },
+      "invoiced": {
+        "type": "datetime",
+        "null": 0
+      },
+      "due": {
+        "type": "date",
+        "null": 0
+      },
+      "amount": {
+        "type": "decimal",
+        "null": 0,
+        "signed": 1,
+        "maxlength": 20,
+        "decimals": 0
+      },
+      "id_category": {
+        "type": "binary",
+        "null": 1,
+        "default": "NULL",
+        "defaultExpression": false,
+        "maxlength": 16
+      },
+      "id_currency": {
+        "type": "binary",
+        "null": 1,
+        "key": "MUL",
+        "default": "NULL",
+        "defaultExpression": false,
+        "maxlength": 16
+      },
+      "currency_rate": {
+        "type": "decimal",
+        "null": 0,
+        "signed": 0,
+        "default": 1,
+        "defaultExpression": false,
+        "maxlength": 20,
+        "decimals": 0
+      },
+      "id_contact": {
+        "type": "binary",
+        "null": 1,
+        "key": "MUL",
+        "default": "NULL",
+        "defaultExpression": false,
+        "maxlength": 16
+      },
+      "comment": {
+        "type": "text",
+        "null": 1,
+        "default": "NULL",
+        "defaultExpression": false
+      },
+      "deleted": {
+        "type": "datetime",
+        "null": 1,
+        "default": "NULL",
+        "defaultExpression": false
+      }
+    }
+  },
+  "bbn_accounting_invoices_items": {
+    "keys": {
+      "PRIMARY": {
+        "columns": [
+          "id"
+        ],
+        "ref_table": "bbn_history_uids",
+        "ref_column": "bbn_uid",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 1
+      },
+      "id_entity": {
+        "columns": [
+          "id_entity"
+        ],
+        "ref_table": "bbn_accounting_entities",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      },
+      "id_invoice": {
+        "columns": [
+          "id_invoice"
+        ],
+        "ref_table": "bbn_accounting_invoices",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      },
+      "id_item": {
+        "columns": [
+          "id_item"
+        ],
+        "ref_table": "bbn_accounting_items",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      }
+    },
+    "cols": {
+      "id": [
+        "PRIMARY"
+      ],
+      "id_entity": [
+        "id_entity"
+      ],
+      "id_invoice": [
+        "id_invoice"
+      ],
+      "id_item": [
+        "id_item"
+      ]
+    },
+    "fields": {
+      "id": {
+        "type": "binary",
+        "null": 0,
+        "key": "PRI",
+        "maxlength": 16
+      },
+      "id_entity": {
+        "type": "binary",
+        "null": 0,
+        "key": "MUL",
+        "maxlength": 16
+      },
+      "id_invoice": {
+        "type": "binary",
+        "null": 0,
+        "key": "MUL",
+        "maxlength": 16
+      },
+      "id_item": {
+        "type": "binary",
+        "null": 0,
+        "key": "MUL",
+        "maxlength": 16
+      },
+      "ref": {
+        "type": "varchar",
+        "null": 1,
+        "default": "NULL",
+        "defaultExpression": false,
+        "maxlength": 100
+      },
+      "quantity": {
+        "type": "int",
+        "null": 0,
+        "signed": 0,
+        "default": 1,
+        "defaultExpression": false,
+        "maxlength": 5
+      },
+      "price": {
+        "type": "decimal",
+        "null": 0,
+        "signed": 0,
+        "maxlength": 20,
+        "decimals": 2
+      },
+      "total": {
+        "type": "decimal",
+        "null": 0,
+        "signed": 0,
+        "maxlength": 20,
+        "decimals": 2
+      },
+      "discount": {
+        "type": "decimal",
+        "null": 1,
+        "signed": 0,
+        "default": "NULL",
+        "defaultExpression": false,
+        "maxlength": 20,
+        "decimals": 2
+      },
+      "creation": {
+        "type": "datetime",
+        "null": 0,
+        "default": "current_timestamp()",
+        "defaultExpression": false
+      }
+    }
+  },
+  "bbn_accounting_invoices_items_taxes": {
+    "keys": {
+      "PRIMARY": {
+        "columns": [
+          "id"
+        ],
+        "ref_table": "bbn_history_uids",
+        "ref_column": "bbn_uid",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 1
+      },
+      "id_entity": {
+        "columns": [
+          "id_entity"
+        ],
+        "ref_table": "bbn_accounting_entities",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      },
+      "id_invoice": {
+        "columns": [
+          "id_invoice"
+        ],
+        "ref_table": "bbn_accounting_invoices",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      },
+      "id_invoice_item": {
+        "columns": [
+          "id_invoice_item"
+        ],
+        "ref_table": "bbn_accounting_invoices_items",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      },
+      "id_tax": {
+        "columns": [
+          "id_tax"
+        ],
+        "ref_table": "bbn_accounting_taxes",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      }
+    },
+    "cols": {
+      "id": [
+        "PRIMARY"
+      ],
+      "id_entity": [
+        "id_entity"
+      ],
+      "id_invoice": [
+        "id_invoice"
+      ],
+      "id_invoice_item": [
+        "id_invoice_item"
+      ],
+      "id_tax": [
+        "id_tax"
+      ]
+    },
+    "fields": {
+      "id": {
+        "type": "binary",
+        "null": 0,
+        "key": "PRI",
+        "maxlength": 16
+      },
+      "id_entity": {
+        "type": "binary",
+        "null": 0,
+        "key": "MUL",
+        "maxlength": 16
+      },
+      "id_invoice": {
+        "type": "binary",
+        "null": 0,
+        "key": "MUL",
+        "maxlength": 16
+      },
+      "id_invoice_item": {
+        "type": "binary",
+        "null": 0,
+        "key": "MUL",
+        "maxlength": 16
+      },
+      "id_tax": {
+        "type": "binary",
+        "null": 1,
+        "key": "MUL",
+        "default": "NULL",
+        "defaultExpression": false,
+        "maxlength": 16
+      },
+      "name": {
+        "type": "varchar",
+        "null": 0,
+        "maxlength": 100
+      },
+      "amount": {
+        "type": "decimal",
+        "null": 0,
+        "signed": 0,
+        "maxlength": 20,
+        "decimals": 2
+      },
+      "creation": {
+        "type": "datetime",
+        "null": 0,
+        "default": "current_timestamp()",
+        "defaultExpression": false
+      }
+    }
+  },
+  "bbn_accounting_invoices_transactions": {
+    "keys": {
+      "PRIMARY": {
+        "columns": [
+          "id_invoice",
+          "id_transaction"
+        ],
+        "unique": 1
+      },
+      "id_invoice": {
+        "columns": [
+          "id_invoice"
+        ],
+        "ref_table": "bbn_accounting_invoices",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      },
+      "id_transaction": {
+        "columns": [
+          "id_transaction"
+        ],
+        "ref_table": "bbn_accounting_transactions",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      }
+    },
+    "cols": {
+      "id_invoice": [
+        "PRIMARY",
+        "id_invoice"
+      ],
+      "id_transaction": [
+        "PRIMARY",
+        "id_transaction"
+      ]
+    },
+    "fields": {
+      "id_invoice": {
+        "type": "binary",
+        "null": 0,
+        "key": "PRI",
+        "maxlength": 16
+      },
+      "id_transaction": {
+        "type": "binary",
+        "null": 0,
+        "key": "PRI",
+        "maxlength": 16
+      }
+    }
+  },
+  "bbn_accounting_items": {
+    "keys": {
+      "PRIMARY": {
+        "columns": [
+          "id"
+        ],
+        "ref_table": "bbn_history_uids",
+        "ref_column": "bbn_uid",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 1
+      },
+      "id_entity": {
+        "columns": [
+          "id_entity"
+        ],
+        "ref_table": "bbn_accounting_entities",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      },
+      "id_category": {
+        "columns": [
+          "id_category"
+        ],
+        "ref_table": "bbn_options",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      },
+      "id_currency": {
+        "columns": [
+          "id_currency"
+        ],
+        "ref_table": "bbn_options",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      },
+      "id_tax": {
+        "columns": [
+          "id_tax"
+        ],
+        "ref_table": "bbn_accounting_taxes",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      }
+    },
+    "cols": {
+      "id": [
+        "PRIMARY"
+      ],
+      "id_entity": [
+        "id_entity"
+      ],
+      "id_category": [
+        "id_category"
+      ],
+      "id_currency": [
+        "id_currency"
+      ],
+      "id_tax": [
+        "id_tax"
+      ]
+    },
+    "fields": {
+      "id": {
+        "type": "binary",
+        "null": 0,
+        "key": "PRI",
+        "maxlength": 16
+      },
+      "id_entity": {
+        "type": "binary",
+        "null": 0,
+        "key": "MUL",
+        "maxlength": 16
+      },
+      "name": {
+        "type": "varchar",
+        "null": 0,
+        "maxlength": 255
+      },
+      "ref": {
+        "type": "varchar",
+        "null": 1,
+        "default": "NULL",
+        "defaultExpression": false,
+        "maxlength": 100
+      },
+      "description": {
+        "type": "text",
+        "null": 1,
+        "default": "NULL",
+        "defaultExpression": false
+      },
+      "id_category": {
+        "type": "binary",
+        "null": 1,
+        "key": "MUL",
+        "default": "NULL",
+        "defaultExpression": false,
+        "maxlength": 16
+      },
+      "id_currency": {
+        "type": "binary",
+        "null": 1,
+        "key": "MUL",
+        "default": "NULL",
+        "defaultExpression": false,
+        "maxlength": 16
+      },
+      "id_tax": {
+        "type": "binary",
+        "null": 1,
+        "key": "MUL",
+        "default": "NULL",
+        "defaultExpression": false,
+        "maxlength": 16
+      },
+      "price": {
+        "type": "decimal",
+        "null": 1,
+        "signed": 0,
+        "default": "NULL",
+        "defaultExpression": false,
+        "maxlength": 20,
+        "decimals": 2
+      },
+      "cost": {
+        "type": "decimal",
+        "null": 1,
+        "signed": 0,
+        "default": "NULL",
+        "defaultExpression": false,
+        "maxlength": 20,
+        "decimals": 2
+      },
+      "quantity": {
+        "type": "int",
+        "null": 0,
+        "signed": 0,
+        "default": 1,
+        "defaultExpression": false,
+        "maxlength": 5
+      },
+      "enabled": {
+        "type": "tinyint",
+        "null": 0,
+        "signed": 0,
+        "maxlength": 1
+      }
+    }
+  },
+  "bbn_accounting_taxes": {
+    "keys": {
+      "PRIMARY": {
+        "columns": [
+          "id"
+        ],
+        "ref_table": "bbn_history_uids",
+        "ref_column": "bbn_uid",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 1
+      },
+      "id_country": {
+        "columns": [
+          "id_country"
+        ],
+        "ref_table": "bbn_options",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      },
+      "type": {
+        "columns": [
+          "type"
+        ],
+        "ref_table": "bbn_options",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      }
+    },
+    "cols": {
+      "id": [
+        "PRIMARY"
+      ],
+      "id_country": [
+        "id_country"
+      ],
+      "type": [
+        "type"
+      ]
+    },
+    "fields": {
+      "id": {
+        "type": "binary",
+        "null": 0,
+        "key": "PRI",
+        "maxlength": 16
+      },
+      "id_country": {
+        "type": "binary",
+        "null": 0,
+        "key": "MUL",
+        "maxlength": 16
+      },
+      "name": {
+        "type": "varchar",
+        "null": 0,
+        "maxlength": 50
+      },
+      "type": {
+        "type": "binary",
+        "null": 0,
+        "key": "MUL",
+        "maxlength": 16
+      },
+      "rate": {
+        "type": "decimal",
+        "null": 0,
+        "signed": 0,
+        "default": 0,
+        "defaultExpression": false,
+        "maxlength": 5,
+        "decimals": 0
+      },
+      "enabled": {
+        "type": "tinyint",
+        "null": 0,
+        "signed": 0,
+        "default": 0,
+        "defaultExpression": false,
+        "maxlength": 1
+      }
+    }
+  },
+  "bbn_accounting_transactions": {
+    "keys": {
+      "PRIMARY": {
+        "columns": [
+          "id"
+        ],
+        "ref_table": "bbn_history_uids",
+        "ref_column": "bbn_uid",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 1
+      },
+      "id_entity": {
+        "columns": [
+          "id_entity"
+        ],
+        "ref_table": "bbn_accounting_entities",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      },
+      "id_account": {
+        "columns": [
+          "id_account"
+        ],
+        "ref_table": "bbn_accounting_accounts",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      },
+      "id_parent": {
+        "columns": [
+          "id_parent"
+        ],
+        "unique": 0
+      },
+      "id_currency": {
+        "columns": [
+          "id_currency"
+        ],
+        "ref_table": "bbn_options",
+        "ref_column": "id",
+        "update": "RESTRICT",
+        "delete": "RESTRICT",
+        "unique": 0
+      }
+    },
+    "cols": {
+      "id": [
+        "PRIMARY"
+      ],
+      "id_entity": [
+        "id_entity"
+      ],
+      "id_account": [
+        "id_account"
+      ],
+      "id_parent": [
+        "id_parent"
+      ],
+      "id_currency": [
+        "id_currency"
+      ]
+    },
+    "fields": {
+      "id": {
+        "type": "binary",
+        "null": 0,
+        "key": "PRI",
+        "maxlength": 16
+      },
+      "id_entity": {
+        "type": "binary",
+        "null": 0,
+        "key": "MUL",
+        "maxlength": 16
+      },
+      "id_account": {
+        "type": "binary",
+        "null": 0,
+        "key": "MUL",
+        "maxlength": 16
+      },
+      "id_parent": {
+        "type": "binary",
+        "null": 1,
+        "key": "MUL",
+        "default": "NULL",
+        "defaultExpression": false,
+        "maxlength": 16
+      },
+      "paid": {
+        "type": "datetime",
+        "null": 1,
+        "default": "NULL",
+        "defaultExpression": false
+      },
+      "type": {
+        "type": "varchar",
+        "null": 0,
+        "maxlength": 20
+      },
+      "amount": {
+        "type": "decimal",
+        "null": 0,
+        "signed": 1,
+        "maxlength": 20,
+        "decimals": 0
+      },
+      "method": {
+        "type": "varchar",
+        "null": 0,
+        "maxlength": 20
+      },
+      "id_currency": {
+        "type": "binary",
+        "null": 1,
+        "key": "MUL",
+        "default": "NULL",
+        "defaultExpression": false,
+        "maxlength": 16
+      },
+      "currency_rate": {
+        "type": "decimal",
+        "null": 0,
+        "signed": 0,
+        "default": 0,
+        "defaultExpression": false,
+        "maxlength": 20,
+        "decimals": 0
+      },
+      "reference": {
+        "type": "varchar",
+        "null": 0,
+        "maxlength": 255
+      },
+      "description": {
+        "type": "text",
+        "null": 0,
+        "default": "''",
+        "defaultExpression": false
+      },
+      "reconciled": {
+        "type": "tinyint",
+        "null": 0,
+        "signed": 0,
+        "default": 0,
+        "defaultExpression": false,
+        "maxlength": 1
+      }
+    }
+  }
 }

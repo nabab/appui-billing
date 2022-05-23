@@ -19,6 +19,7 @@
   ],
   "require": {
     "php": ">=7.1",
-    "bbn/bbn": "dev-master"
+    "bbn/bbn": "dev-master",
+    "bbn/appui-entity": "dev-master"
   }
 }
