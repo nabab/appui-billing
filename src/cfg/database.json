@@ -24,7 +24,6 @@
       "name": {
         "type": "varchar",
         "null": 0,
-        "key": null,
         "signed": true,
         "maxlength": 100
       }
@@ -72,59 +71,57 @@
         "key": "MUL",
         "signed": true,
         "default": "NULL",
+        "defaultExpression": 1,
         "maxlength": 16
       },
       "ref": {
         "type": "int",
         "null": 0,
-        "key": null,
         "maxlength": 5
       },
       "ref_year": {
         "type": "year",
         "null": 1,
-        "key": null,
         "extra": "VIRTUAL GENERATED",
         "signed": true,
         "virtual": true,
         "generation": "year(`creation`)",
         "default": "NULL",
+        "defaultExpression": 1,
         "maxlength": 4
       },
       "creation": {
         "type": "datetime",
         "null": 0,
-        "key": null,
         "signed": true,
         "generation": ""
       },
       "description": {
         "type": "text",
         "null": 0,
-        "key": null,
         "signed": true,
         "generation": ""
       },
       "tax": {
         "type": "int",
         "null": 1,
-        "key": null,
         "default": "NULL",
+        "defaultExpression": 1,
         "maxlength": 10
       },
       "taxable": {
         "type": "decimal",
         "null": 1,
-        "key": null,
         "default": "NULL",
+        "defaultExpression": 1,
         "maxlength": 14,
         "decimals": 2
       },
       "amount": {
         "type": "decimal",
         "null": 1,
-        "key": null,
         "default": "NULL",
+        "defaultExpression": 1,
         "maxlength": 14,
         "decimals": 2
       }
@@ -366,7 +363,7 @@
         "defaultExpression": false,
         "maxlength": 10
       },
-      "billd": {
+      "billed": {
         "type": "datetime",
         "null": 0
       },
