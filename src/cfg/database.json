@@ -547,8 +547,8 @@
       "creation": {
         "type": "datetime",
         "null": 0,
-        "default": "current_timestamp()",
-        "defaultExpression": false
+        "default": "NOW()",
+        "defaultExpression": 1
       }
     }
   },
@@ -670,8 +670,8 @@
       "creation": {
         "type": "datetime",
         "null": 0,
-        "default": "current_timestamp()",
-        "defaultExpression": false
+        "default": "NOW()",
+        "defaultExpression": 1
       }
     }
   },
@@ -1099,8 +1099,8 @@
       "creation": {
         "type": "datetime",
         "null": 0,
-        "default": "current_timestamp()",
-        "defaultExpression": false
+        "default": "NOW()",
+        "defaultExpression": 1
       }
     }
   },
@@ -1222,8 +1222,8 @@
       "creation": {
         "type": "datetime",
         "null": 0,
-        "default": "current_timestamp()",
-        "defaultExpression": false
+        "default": "NOW()",
+        "defaultExpression": 1
       }
     }
   },
