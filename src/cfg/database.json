@@ -18,13 +18,11 @@
         "type": "binary",
         "null": 0,
         "key": "PRI",
-        "signed": true,
         "maxlength": 16
       },
       "name": {
         "type": "varchar",
         "null": 0,
-        "signed": true,
         "maxlength": 100
       }
     }
@@ -62,14 +60,12 @@
         "type": "binary",
         "null": 0,
         "key": "PRI",
-        "signed": true,
         "maxlength": 16
       },
       "id_media": {
         "type": "binary",
         "null": 1,
         "key": "MUL",
-        "signed": true,
         "default": "NULL",
         "defaultExpression": 1,
         "maxlength": 16
@@ -83,7 +79,6 @@
         "type": "year",
         "null": 1,
         "extra": "VIRTUAL GENERATED",
-        "signed": true,
         "virtual": true,
         "generation": "year(`creation`)",
         "default": "NULL",
@@ -93,13 +88,11 @@
       "creation": {
         "type": "datetime",
         "null": 0,
-        "signed": true,
         "generation": ""
       },
       "description": {
         "type": "text",
         "null": 0,
-        "signed": true,
         "generation": ""
       },
       "tax": {
