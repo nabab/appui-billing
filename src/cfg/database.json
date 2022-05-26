@@ -382,7 +382,7 @@
         "type": "binary",
         "null": 1,
         "default": "NULL",
-        "defaultExpression": false,
+        "defaultExpression": 1,
         "maxlength": 16
       },
       "id_currency": {
@@ -390,7 +390,7 @@
         "null": 1,
         "key": "MUL",
         "default": "NULL",
-        "defaultExpression": false,
+        "defaultExpression": 1,
         "maxlength": 16
       },
       "currency_rate": {
@@ -398,7 +398,7 @@
         "null": 0,
         "signed": 0,
         "default": 1,
-        "defaultExpression": false,
+        "defaultExpression": 1,
         "maxlength": 20,
         "decimals": 0
       },
@@ -407,20 +407,20 @@
         "null": 1,
         "key": "MUL",
         "default": "NULL",
-        "defaultExpression": false,
+        "defaultExpression": 1,
         "maxlength": 16
       },
       "comment": {
         "type": "text",
         "null": 1,
         "default": "NULL",
-        "defaultExpression": false
+        "defaultExpression": 1
       },
       "deleted": {
         "type": "datetime",
         "null": 1,
         "default": "NULL",
-        "defaultExpression": false
+        "defaultExpression": 1
       }
     }
   },
@@ -510,7 +510,7 @@
         "type": "varchar",
         "null": 1,
         "default": "NULL",
-        "defaultExpression": false,
+        "defaultExpression": 1,
         "maxlength": 100
       },
       "quantity": {
@@ -540,7 +540,7 @@
         "null": 1,
         "signed": 0,
         "default": "NULL",
-        "defaultExpression": false,
+        "defaultExpression": 1,
         "maxlength": 20,
         "decimals": 2
       },
@@ -652,7 +652,7 @@
         "null": 1,
         "key": "MUL",
         "default": "NULL",
-        "defaultExpression": false,
+        "defaultExpression": 1,
         "maxlength": 16
       },
       "name": {
@@ -934,7 +934,7 @@
         "type": "binary",
         "null": 1,
         "default": "NULL",
-        "defaultExpression": false,
+        "defaultExpression": 1,
         "maxlength": 16
       },
       "id_currency": {
@@ -942,7 +942,7 @@
         "null": 1,
         "key": "MUL",
         "default": "NULL",
-        "defaultExpression": false,
+        "defaultExpression": 1,
         "maxlength": 16
       },
       "currency_rate": {
@@ -959,20 +959,20 @@
         "null": 1,
         "key": "MUL",
         "default": "NULL",
-        "defaultExpression": false,
+        "defaultExpression": 1,
         "maxlength": 16
       },
       "comment": {
         "type": "text",
         "null": 1,
         "default": "NULL",
-        "defaultExpression": false
+        "defaultExpression": 1
       },
       "deleted": {
         "type": "datetime",
         "null": 1,
         "default": "NULL",
-        "defaultExpression": false
+        "defaultExpression": 1
       }
     }
   },
@@ -1062,7 +1062,7 @@
         "type": "varchar",
         "null": 1,
         "default": "NULL",
-        "defaultExpression": false,
+        "defaultExpression": 1,
         "maxlength": 100
       },
       "quantity": {
@@ -1092,7 +1092,7 @@
         "null": 1,
         "signed": 0,
         "default": "NULL",
-        "defaultExpression": false,
+        "defaultExpression": 1,
         "maxlength": 20,
         "decimals": 2
       },
@@ -1204,7 +1204,7 @@
         "null": 1,
         "key": "MUL",
         "default": "NULL",
-        "defaultExpression": false,
+        "defaultExpression": 1,
         "maxlength": 16
       },
       "name": {
@@ -1374,21 +1374,21 @@
         "type": "varchar",
         "null": 1,
         "default": "NULL",
-        "defaultExpression": false,
+        "defaultExpression": 1,
         "maxlength": 100
       },
       "description": {
         "type": "text",
         "null": 1,
         "default": "NULL",
-        "defaultExpression": false
+        "defaultExpression": 1
       },
       "id_category": {
         "type": "binary",
         "null": 1,
         "key": "MUL",
         "default": "NULL",
-        "defaultExpression": false,
+        "defaultExpression": 1,
         "maxlength": 16
       },
       "id_currency": {
@@ -1396,7 +1396,7 @@
         "null": 1,
         "key": "MUL",
         "default": "NULL",
-        "defaultExpression": false,
+        "defaultExpression": 1,
         "maxlength": 16
       },
       "id_tax": {
@@ -1404,7 +1404,7 @@
         "null": 1,
         "key": "MUL",
         "default": "NULL",
-        "defaultExpression": false,
+        "defaultExpression": 1,
         "maxlength": 16
       },
       "price": {
@@ -1412,7 +1412,7 @@
         "null": 1,
         "signed": 0,
         "default": "NULL",
-        "defaultExpression": false,
+        "defaultExpression": 1,
         "maxlength": 20,
         "decimals": 2
       },
@@ -1421,7 +1421,7 @@
         "null": 1,
         "signed": 0,
         "default": "NULL",
-        "defaultExpression": false,
+        "defaultExpression": 1,
         "maxlength": 20,
         "decimals": 2
       },
@@ -1618,14 +1618,14 @@
         "null": 1,
         "key": "MUL",
         "default": "NULL",
-        "defaultExpression": false,
+        "defaultExpression": 1,
         "maxlength": 16
       },
       "paid": {
         "type": "datetime",
         "null": 1,
         "default": "NULL",
-        "defaultExpression": false
+        "defaultExpression": 1
       },
       "type": {
         "type": "varchar",
@@ -1649,7 +1649,7 @@
         "null": 1,
         "key": "MUL",
         "default": "NULL",
-        "defaultExpression": false,
+        "defaultExpression": 1,
         "maxlength": 16
       },
       "currency_rate": {
