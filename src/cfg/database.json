@@ -794,8 +794,10 @@
       },
       "id_address": {
         "type": "binary",
-        "null": 0,
+        "null": 1,
         "key": "MUL",
+        "default": "NULL",
+        "defaultExpression": 1,
         "maxlength": 16
       },
       "owner": {
