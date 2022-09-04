@@ -7,7 +7,7 @@
       let d = this.source && this.source.id ? this.source : {
         name: '',
         id_country: '',
-        owner: appui.app.userId,
+        owner: appui.app.user.id,
         tax_number: ''
       };
       return {
@@ -19,7 +19,7 @@
       users() {
         return appui.app.users || [{
           text: appui.app.userName,
-          value: appui.app.userId
+          value: appui.app.user.id
         }];
       },
       countries() {
