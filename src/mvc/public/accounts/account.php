@@ -4,7 +4,7 @@ use bbn\X;
 use bbn\Str;
 /** @var $ctrl \bbn\Mvc\Controller */
 
-if (empty(BBN_BASEURL)) {
+if (!defined('BBN_BASEURL') || empty(BBN_BASEURL)) {
   $ctrl->addToObj(APPUI_BILLING_ROOT . 'accounts');
 }
 elseif ($ctrl->hasArguments()) {
