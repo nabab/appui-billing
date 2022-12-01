@@ -48,13 +48,14 @@ if (
 */
 
   $grid = new \bbn\Appui\Grid($model->db, $model->data, [
-    'tables' => ['bbn_tasks'],
+    'table' => 'bbn_tasks',
     'fields' => [
       'bbn_tasks.id',
       'bbn_tasks.type',
       'bbn_tasks.id_parent',
       'bbn_tasks.id_user',
-      'bbn_tasks.title',
+      'bbn_notes_versions.title',
+      'bbn_notes_versions.content',
       'bbn_tasks.state',
       'bbn_tasks.priority',
       'bbn_tasks.id_alias',
@@ -70,6 +71,17 @@ if (
       'price_date' => "MAX(log_price.chrono)"
     ],
     'join' => [[
+      'table' => 'bbn_notes_versions',
+      'on' => [
+        'conditions' => [[
+          'field' => 'bbn_notes_versions.id_note',
+          'exp' => 'bbn_tasks.id_note'
+        ], [
+          'field' => 'bbn_notes_versions.latest',
+          'value' => 1
+        ]]
+      ]
+    ], [
       'table' => 'bbn_tasks_invoices',
       'type' => 'left',
       'on' => [
