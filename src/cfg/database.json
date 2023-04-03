@@ -1,32 +1,4 @@
 {
-  "bbn_clients": {
-    "keys": {
-      "PRIMARY": {
-        "columns": [
-          "id"
-        ],
-        "unique": 1
-      }
-    },
-    "cols": {
-      "id": [
-        "PRIMARY"
-      ]
-    },
-    "fields": {
-      "id": {
-        "type": "binary",
-        "null": 0,
-        "key": "PRI",
-        "maxlength": 16
-      },
-      "name": {
-        "type": "varchar",
-        "null": 0,
-        "maxlength": 100
-      }
-    }
-  },
   "bbn_invoices": {
     "keys": {
       "PRIMARY": {
