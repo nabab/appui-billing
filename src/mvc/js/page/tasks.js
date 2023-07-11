@@ -21,7 +21,7 @@
 <div class="bbn-vmiddle">
   <bbn-initial :user-id="source.id_user"
                :height="20"
-               :title="userName(source.id_user)"
+               :user-name="userName(source.id_user)"
   ></bbn-initial>
   <span v-text="userName(source.id_user)"
         class="bbn-hsmargin"
@@ -38,7 +38,7 @@
 <div class="bbn-vmiddle">
   <bbn-initial :user-id="source.approve_user"
                :height="20"
-               :title="userName(source.approve_user)"
+               :user-name="userName(source.approve_user)"
   ></bbn-initial>
   <span v-text="userName(source.approve_user)"
         class="bbn-hsmargin"
@@ -55,7 +55,7 @@
 <div class="bbn-vmiddle">
   <bbn-initial :user-id="source.close_user"
                :height="20"
-               :title="userName(source.close_user)"
+               :user-name="userName(source.close_user)"
   ></bbn-initial>
   <span v-text="userName(source.close_user)"
         class="bbn-hsmargin"
