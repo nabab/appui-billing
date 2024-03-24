@@ -1,10 +1,10 @@
 <?php
 if (
   isset($model->data['limit'], $model->data['start']) &&
-  ($closed_opt = \bbn\Appui\Task::getAppuiOptionId('closed', 'states')) &&
-  ($close_opt = \bbn\Appui\Task::getAppuiOptionId('task_close', 'actions')) &&
-  ($approve_opt = \bbn\Appui\Task::getAppuiOptionId('price_approved', 'actions')) &&
-  ($price_opt = \bbn\Appui\Task::getAppuiOptionId('price_update', 'actions'))
+  ($closed_opt = \bbn\Appui\Task::getOptionId('closed', 'states')) &&
+  ($close_opt = \bbn\Appui\Task::getOptionId('task_close', 'actions')) &&
+  ($approve_opt = \bbn\Appui\Task::getOptionId('price_approved', 'actions')) &&
+  ($price_opt = \bbn\Appui\Task::getOptionId('price_update', 'actions'))
 ){
 /*  return [
     'data' => $model->db->getRows("

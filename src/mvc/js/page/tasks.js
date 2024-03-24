@@ -29,7 +29,7 @@
 </div>
         `,
         methods: {
-          userName: appui.app.getUserName
+          userName: appui.getUserName
         }
       },
       approveUser: {
@@ -46,7 +46,7 @@
 </div>
         `,
         methods: {
-          userName: appui.app.getUserName
+          userName: appui.getUserName
         }
       },
       closeUser: {
@@ -63,7 +63,7 @@
 </div>
         `,
         methods: {
-          userName: appui.app.getUserName
+          userName: appui.getUserName
         }
       }
     }
