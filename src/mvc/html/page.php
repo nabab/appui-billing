@@ -4,13 +4,13 @@
               :nav="true"
   >
     <bbns-container url="home"
-              :static="true"
+              :fixed="true"
               :load="true"
               title="<?= _("Invoices") ?>"
               icon="nf nf-fa-home"
     ></bbns-container>
     <bbns-container url="tasks"
-              :static="true"
+              :fixed="true"
               :load="true"
               title="<?= _("Tasks not billed") ?>"
               icon="nf nf-fa-bug"

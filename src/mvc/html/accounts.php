@@ -3,7 +3,7 @@
 <div class="bbn-overlay">
   <bbn-router :nav="true"
               :menu="[]">
-    <bbn-container :static="true"
+    <bbn-container :fixed="true"
                    :scrollable="false"
                    :autoload="true"
                    title="<?= _("Liste des comptes") ?>"
