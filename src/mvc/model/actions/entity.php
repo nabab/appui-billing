@@ -7,7 +7,7 @@
 use bbn\X;
 use bbn\Str;
 use bbn\Accounting\Entity;
-/** @var $model \bbn\Mvc\Model*/
+/** @var bbn\Mvc\Model $model */
 
 if ($model->hasData('action', true)) {
   switch($model->data['action']) {

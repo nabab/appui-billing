@@ -2,7 +2,7 @@
 
 use bbn\X;
 use bbn\Str;
-/** @var $ctrl \bbn\Mvc\Controller */
+/** @var bbn\Mvc\Controller $ctrl */
 
 if (!defined('BBN_BASEURL') || empty(BBN_BASEURL)) {
   $ctrl->addToObj(APPUI_BILLING_ROOT . 'accounts');

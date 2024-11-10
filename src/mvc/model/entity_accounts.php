@@ -9,7 +9,7 @@ use bbn\Str;
 use bbn\Accounting\Account;
 use bbn\Accounting\Bank;
 use bbn\Accounting\Entity;
-/** @var $model \bbn\Mvc\Model*/
+/** @var bbn\Mvc\Model $model */
 
 if ($model->hasData(['limit', 'data']) && !empty($model->data['data']['id_entity'])) {
   $accounts = new Account($model->db);
