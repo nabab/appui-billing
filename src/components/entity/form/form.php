@@ -3,7 +3,7 @@
 <bbn-form :action="root + 'actions/entity/insert'"
           :source="currentData"
           @success="onSuccess">
-  <div class="bbn-grid-fields bbn-lpadded bbn-nowrap">
+  <div class="bbn-grid-fields bbn-lpadding bbn-nowrap">
     <label><?= _("Name") ?></label>
     <bbn-input v-model="currentData.name"
                class="bbn-wide"

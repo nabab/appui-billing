@@ -1,6 +1,6 @@
 <!-- HTML Document -->
 <div class="bbn-overlay bbn-flex-height">
-  <div class="bbn-header bbn-padded">
+  <div class="bbn-header bbn-padding">
     <h2 v-text="source.name"/>
   </div>
   <div class="bbn-flex-fill">

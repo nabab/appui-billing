@@ -63,7 +63,7 @@
     components: {
       toolbar: {
         template: `
-<div class="bbn-header bbn-spadded bbn-100 bbn-no-border-bottom bbn-vmiddle">
+<div class="bbn-header bbn-spadding bbn-100 bbn-no-border-bottom bbn-vmiddle">
   <span class="bbn-right-sspace">`+ bbn._('Year') + `:</span>
   <bbn-datepicker :max="maxYear"
                   v-model="currentYear"
