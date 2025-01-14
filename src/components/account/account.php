@@ -11,7 +11,7 @@
                :pageable="true"
                :toolbar="toolbarSource">
       <bbns-column field="id"
-                   :hidden="true"/>
+                   :invisible="true"/>
       <bbns-column field="reference"/>
       <bbns-column field="paid"
                    type="date"/>

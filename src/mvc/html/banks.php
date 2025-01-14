@@ -15,7 +15,7 @@
                editable="popup"
                :sortable="true">
     	<bbns-column field="id"
-                   :hidden="true"
+                   :invisible="true"
                    :editable="false"
                    label="<?= _("ID") ?>"/>
     	<bbns-column field="name"
