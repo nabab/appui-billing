@@ -39,7 +39,7 @@
       getButton(row){
         if ( row.id_task ){
           return [{
-            title: bbn._('Open task'),
+            label: bbn._('Open task'),
             action: this.openTask,
             icon: 'nf nf-fa-bug'
           }];

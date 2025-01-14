@@ -12,7 +12,7 @@
         this.getRef('table').insert();
         /*
         this.getPopup({
-          title: bbn._("New bank"),
+          label: bbn._("New bank"),
           component: "appui-billing-bank-form"
         });
         */

@@ -4,13 +4,13 @@
   	<div>
       <bbn-button @click="addEntity"
                   icon="nf nf-fa-plus"
-                  text="<?= _("New entity") ?>"/>
+                  label="<?= _("New entity") ?>"/>
     </div>
   </bbn-toolbar>
   <div class="bbn-flex-fill">
     <bbn-dashboard v-if="source.entities">
       <bbn-widget v-for="entity in source.entities"
-                  :title="entity.name">
+                  :label="entity.name">
         <a :href="root + 'entity_accounts/' + entity.id"><?= _("Accounts") ?></a><br>
         <a :href="root + 'banks/' + entity.id"><?= _("Banks") ?></a><br>
       </bbn-widget>

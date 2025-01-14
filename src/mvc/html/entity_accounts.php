@@ -4,7 +4,7 @@
   	<div>
       <bbn-button @click="addAccount"
                   icon="nf nf-fa-plus"
-                  text="<?= _("New account") ?>"/>
+                  label="<?= _("New account") ?>"/>
     </div>
   </bbn-toolbar>
   <div class="bbn-flex-fill">
@@ -16,19 +16,19 @@
                :sortable="true">
     	<bbns-column field="id"
                    :hidden="true"
-                   title="<?= _("ID") ?>"
+                   label="<?= _("ID") ?>"
                    :editable="false"/>
     	<bbns-column field="name"
-                   title="<?= _("Name") ?>"/>
+                   label="<?= _("Name") ?>"/>
     	<bbns-column field="account_number"
-                   title="<?= _("Account number") ?>"/>
+                   label="<?= _("Account number") ?>"/>
     	<bbns-column field="id_bank"
-                   title="<?= _("Bank") ?>"
+                   label="<?= _("Bank") ?>"
                    :source="banks"/>
       <!-- TODO
     	<bbns-column name="id_currency"
                    :width="50"
-                   title="<?= _("Currency") ?>"/>
+                   label="<?= _("Currency") ?>"/>
 			-->
     </bbn-table>
   </div>

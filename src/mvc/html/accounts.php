@@ -6,7 +6,7 @@
     <bbn-container :fixed="true"
                    :scrollable="false"
                    :autoload="true"
-                   title="<?= _("Liste des comptes") ?>"
+                   label="<?= _("Liste des comptes") ?>"
                    url="list">
     	<bbn-table :sortable="true"
                  :source="source.data">

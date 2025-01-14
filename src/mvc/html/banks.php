@@ -4,7 +4,7 @@
   	<div>
       <bbn-button @click="addBank"
                   icon="nf nf-fa-plus"
-                  text="<?= _("New bank") ?>"/>
+                  label="<?= _("New bank") ?>"/>
     </div>
   </bbn-toolbar>
   <div class="bbn-flex-fill">
@@ -17,9 +17,9 @@
     	<bbns-column field="id"
                    :hidden="true"
                    :editable="false"
-                   title="<?= _("ID") ?>"/>
+                   label="<?= _("ID") ?>"/>
     	<bbns-column field="name"
-                   title="<?= _("Name") ?>"/>
+                   label="<?= _("Name") ?>"/>
     </bbn-table>
   </div>
 </div>

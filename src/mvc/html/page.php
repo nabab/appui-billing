@@ -6,13 +6,13 @@
     <bbns-container url="home"
               :fixed="true"
               :load="true"
-              title="<?= _("Invoices") ?>"
+              label="<?= _("Invoices") ?>"
               icon="nf nf-fa-home"
     ></bbns-container>
     <bbns-container url="tasks"
               :fixed="true"
               :load="true"
-              title="<?= _("Tasks not billed") ?>"
+              label="<?= _("Tasks not billed") ?>"
               icon="nf nf-fa-bug"
     ></bbns-container>
   </bbn-router>

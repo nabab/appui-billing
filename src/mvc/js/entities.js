@@ -10,7 +10,7 @@
     methods: {
     	addEntity() {
         this.getPopup({
-          title: bbn._("New entity"),
+          label: bbn._("New entity"),
           component: "appui-billing-entity-form"
         });
       }
