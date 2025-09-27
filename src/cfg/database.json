@@ -49,12 +49,9 @@
       },
       "ref_year": {
         "type": "year",
-        "null": 1,
         "extra": "VIRTUAL GENERATED",
         "virtual": true,
         "generation": "year(`creation`)",
-        "default": "NULL",
-        "defaultExpression": 1,
         "maxlength": 4
       },
       "creation": {
