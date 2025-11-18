@@ -3,7 +3,7 @@
     data(){
       return {
         root: appui.plugins['appui-billing'] + '/',
-        year: dayjs().format('YYYY')
+        year: bbn.date().format('YYYY')
       }
     },
     methods: {
